@@ -15,7 +15,7 @@ Vue.prototype.$http = fetch
 import { initWxShare } from './utils/shareConfig'
 // 全局初始化样式
 import './assets/sass/common/_global.scss'
-import './assets/sass/common/_function.scss'  
+import './assets/sass/common/_function.scss' 
 import './mock'
 // 无缝滚动
 import scroll from 'vue-seamless-scroll'

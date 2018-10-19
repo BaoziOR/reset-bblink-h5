@@ -47,7 +47,7 @@ export default new Router({
           component: Login,
           meta:{
             requireAuth:false,
-            title:'登陆',
+            title:'手机快捷登陆',
             description:'登陆描述',
             keywords:'登陆关键字',
             headerShow:true,

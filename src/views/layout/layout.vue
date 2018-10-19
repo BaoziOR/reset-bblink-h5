@@ -1,7 +1,7 @@
 <template>
 	<div class="layout_content">
 		<headerBar :title="title" v-if="headerShow"></headerBar>
-		<router-view class="layout_views" :key="$route.fullPath"></router-view>
+		<router-view class="layout_views"></router-view>
 		<footerBar :footerNav="footerNav" v-if="footerShow"></footerBar>
 	</div>
 </template>
@@ -31,18 +31,24 @@
 				if(!!this.$route.meta.footerShow) {
 					this.footerShow = this.$route.meta.footerShow
 				}	
+			},
+			goBack() {
+				console.log(111)
+				console.log(this.$route,'ddddd')
+				window.history.go(-1)
 			}
 		},
 		components: {
 			headerBar,
 			footerBar
 		},
-		created() {
+		mounted() {
 			this.resetLayout()
 		}
 	}
 </script>
 <style lang="scss">
+	@import'@/assets/sass/common/_function.scss';
 	.layout_content{
 		display: flex;
 		flex-direction: column;
